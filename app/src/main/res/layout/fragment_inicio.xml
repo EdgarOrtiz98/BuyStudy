@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="80dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InicioFragment"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/layout" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inicio"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textSize="23dp"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tituloSaldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saldo"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:id="@+id/tituloGastos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gastoMes"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="23dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/mostrarSaldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$ 1500"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/mostrarGastosMes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$ 200"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="40dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ultimosGastos"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="50dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewUltimosGasto"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:layout_marginBottom="5dp"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

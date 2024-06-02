@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#a2bfee"
+    android:layout_marginHorizontal="20dp">
+
+    <LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/cerrarFormNota"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:src="@drawable/baseline_close_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/nuevaNota"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextNota"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:hint="@string/nota"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#494444"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editTextFechaNota"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:hint="fecha"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#494444"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:inputType="date"/>
+
+        <TextView
+            android:id="@+id/alertaNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnGuardarNota"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#384fbd"
+            android:text="@string/guardar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

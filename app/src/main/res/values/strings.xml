@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name" translatable="false">BuyStudy</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <string name="bienvenidos">Bienvenidos</string>
+    <string name="correo">Correo</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="acceder">Acceder</string>
+    <string name="agenda">Agenda</string>
+    <string name="notas">Notas</string>
+    <string name="planesCompra">Planes de Compra</string>
+    <string name="historial">Historial</string>
+    <string name="ingreso">Ingreso</string>
+    <string name="ingresos">Ingresos</string>
+    <string name="gasto">Gasto</string>
+    <string name="gastos">Gastos</string>
+    <string name="inicio">Inicio</string>
+    <string name="saldo">Saldo</string>
+    <string name="gastoMes">Gasto/mes</string>
+    <string name="ultimosGastos">Ultimos Gastos</string>
+    <string name="transacciones">Transacciones</string>
+    <string name="tipo">Tipo</string>
+    <string name="categoria">Categoria</string>
+    <string name="fecha">Fecha</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="nuevaNota">Nueva Nota</string>
+    <string name="nota">Notas</string>
+    <string name="nota1">Nota</string>
+    <string name="guardar">Guardar</string>
+    <string name="editar">Editar</string>
+    <string name="nuevoPlanCompra">Nuevo Plan de Compra</string>
+    <string name="objetoComparar">Objeto a Compar</string>
+    <string name="precio">Precio</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="transaction_types">
+        <item>Gastos</item>
+        <item>Ingresos</item>
+    </string-array>
+
+    <string-array name="expense_categories_gastos">
+        <item>Alimentación</item>
+        <item>Transporte</item>
+        <item>Libros</item>
+        <item>Copias</item>
+        <item>Colegiatura</item>
+        <item>Vivienda</item>
+        <item>Tecnologia</item>
+        <item>Entretenimiento</item>
+        <item>Articulos Personales</item>
+        <item>Viajes de estudio</item>
+        <item>Sin Categoria</item>
+    </string-array>
+
+
+    <string-array name="expense_categories_ingresos">
+        <item>Sueldo</item>
+        <item>Tranferencia</item>
+        <item>Negocio</item>
+        <item>Sin Categoria</item>
+    </string-array>
+</resources>

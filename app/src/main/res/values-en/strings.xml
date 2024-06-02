@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bienvenidos">Welcome</string>
+    <string name="correo">Email</string>
+    <string name="contraseña">Password</string>
+    <string name="registrarse">Sign Up</string>
+    <string name="acceder">Log In</string>
+    <string name="agenda">Agenda</string>
+    <string name="notas">Notes</string>
+    <string name="planesCompra">Purchase Plans</string>
+    <string name="historial">History</string>
+    <string name="ingreso">Income</string>
+    <string name="ingresos">Incomes</string>
+    <string name="gasto">Expense</string>
+    <string name="gastos">Expenses</string>
+    <string name="inicio">Home</string>
+    <string name="saldo">Balance</string>
+    <string name="gastoMes">Expense/Month</string>
+    <string name="ultimosGastos">Last Expenses</string>
+    <string name="transacciones">Transactions</string>
+    <string name="tipo">Type</string>
+    <string name="categoria">Category</string>
+    <string name="fecha">Date</string>
+    <string name="confirmar">Confirm</string>
+    <string name="nuevaNota">New Note</string>
+    <string name="nota">Notes</string>
+    <string name="nota1">Note</string>
+    <string name="guardar">Save</string>
+    <string name="editar">Edit</string>
+    <string name="nuevoPlanCompra">New Purchase Plan</string>
+    <string name="objetoComparar">Item to Compare</string>
+    <string name="precio">Price</string>
+</resources>

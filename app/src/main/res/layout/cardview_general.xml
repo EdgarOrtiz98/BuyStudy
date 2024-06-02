@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="6dp"
+    android:padding="4dp"
+    app:ignore="NamespaceTypo"
+    android:backgroundTint="#2B6CCA">
+
+    <RelativeLayout
+        android:id="@+id/RvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textColor="@color/white"
+            android:id="@+id/itemTitulo"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="25sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id"
+            android:textColor="@color/white"
+            android:id="@+id/itemId"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:textSize="25dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/itemFecha"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textColor="@color/white"
+            android:id="@+id/itemFecha"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:textColor="@color/white"
+            android:id="@+id/itemDelete"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:textSize="25dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/baseline_delete_24"
+            android:layout_below="@+id/itemTitulo"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

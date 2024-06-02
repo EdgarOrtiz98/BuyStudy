@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "99002725222",
+    "project_id": "buyestudy",
+    "storage_bucket": "buyestudy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99002725222:android:d2ff4d07a5e4e339eccea7",
+        "android_client_info": {
+          "package_name": "com.edgardev.buystudy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO6zuTaudMODkvS4jENNIi7nhz0ixXSk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99002725222:android:9b7ac3d3fcbf83feeccea7",
+        "android_client_info": {
+          "package_name": "com.example.buyestudy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO6zuTaudMODkvS4jENNIi7nhz0ixXSk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

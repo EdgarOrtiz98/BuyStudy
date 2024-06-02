@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/agendaFragment2">
+
+    <fragment
+        android:id="@+id/agendaFragment2"
+        android:name="com.edgardev.buystudy.AgendaFragment2"
+        android:label="AgendaFragment2"
+        tools:layout="@layout/fragment_agenda2">
+        <action
+            android:id="@+id/action_agendaFragment2_to_editNotaFragment"
+            app:destination="@id/editNotaFragment" />
+        <action
+            android:id="@+id/action_agendaFragment2_to_formNotesFragment"
+            app:destination="@id/formNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNotaFragment"
+        android:name="com.edgardev.buystudy.EditNotaFragment"
+        android:label="EditNotaFragment"
+        tools:layout="@layout/fragment_edit_nota">
+        <action
+            android:id="@+id/action_editNotaFragment_to_agendaFragment2"
+            app:destination="@id/agendaFragment2" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="nota"
+            app:argType="string" />
+        <argument
+            android:name="fecha"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/formNotesFragment"
+        android:name="com.edgardev.buystudy.FormNotesFragment"
+        android:label="FormNotesFragment"
+        tools:layout="@layout/activity_form_notes">
+        <action
+            android:id="@+id/action_formNotesFragment_to_agendaFragment2"
+            app:destination="@id/agendaFragment2" />
+    </fragment>
+
+</navigation>

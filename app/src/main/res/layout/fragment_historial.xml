@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="80dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HistorialFragment"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/layout" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/historial"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/white"
+                android:textSize="23dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp">
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ingreso" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/gastos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-150dp">
+
+                <TextView
+                    android:id="@+id/textgasto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ingreso"
+                    android:textColor="@color/white"
+                    android:textSize="23dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/textingreso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gasto"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="23dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imagenflechaa"
+                        android:layout_width="32dp"
+                        android:layout_height="53dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_arrow_up_24" />
+
+                    <TextView
+                        android:id="@+id/cantidadingreso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$1000"
+                        android:textColor="@color/white"
+                        android:textSize="40dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/imagenflechaabajo"
+                        android:layout_width="32dp"
+                        android:layout_height="53dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_arrow_down_24" />
+
+                    <TextView
+                        android:id="@+id/cantidadgasto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$1000"
+                        android:textColor="@color/white"
+                        android:textSize="40dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tituloGastos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gastos"
+                android:layout_marginTop="60dp"
+                android:textColor="@color/black"
+                android:textSize="23dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewGasto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tituloIngresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingresos"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="23dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewIngresos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

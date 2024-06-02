@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="80dp">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/notas"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:id="@+id/tituloNotas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notas"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="185dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="23dp" />
+
+                <Button
+                    android:id="@+id/btnAgregarNotas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="+"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="#384fbd"
+                    app:strokeWidth="3dp"
+                    android:textColor="#384fbd"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="545dp" />
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewNotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

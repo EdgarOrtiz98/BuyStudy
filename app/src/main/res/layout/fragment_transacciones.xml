@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="80dp">
+
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TransaccionesFragment"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transacciones"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:text="$"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+            <EditText
+                android:id="@+id/editTextCantidadTransaccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="-40dp"
+                android:layout_marginLeft="60dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:hint="0"
+                android:textSize="40dp"
+                android:background="#00000000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/titTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tipo" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoTransaccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/transaction_types"/>
+
+            <TextView
+                android:id="@+id/titCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/categoria" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoryGastos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:entries="@array/expense_categories_gastos"/>
+
+            <Spinner
+                android:id="@+id/spinnerCategoryIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:entries="@array/expense_categories_ingresos"/>
+
+            <TextView
+                android:id="@+id/titFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/fecha" />
+
+            <EditText
+                android:id="@+id/editTextFechaTransaccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:ems="10"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/titNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/notas" />
+
+            <EditText
+                android:id="@+id/editTextNotaTrasaccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="@color/black"/>
+
+            <TextView
+                android:id="@+id/alertaTransaccionExitosa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#0d7f0c"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/alertaTransaccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btnComfirmarTransaccion"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#384fbd"
+                android:text="@string/confirmar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="463dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

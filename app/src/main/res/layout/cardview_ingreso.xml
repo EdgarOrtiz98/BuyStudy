@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="6dp"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#0d7f0c">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textColor="@color/white"
+            android:id="@+id/item_titulo"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/titulo_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:textSize="25dp"
+            android:layout_toStartOf="@+id/item_detalle"
+            android:text=" $ "
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textColor="@color/white"
+            android:id="@+id/item_detalle"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:textSize="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/item_fecha"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textColor="@color/white"
+            android:id="@+id/item_fecha"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_fecha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="id"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
