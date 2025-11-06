@@ -1,93 +1,112 @@
 package com.edgardev.buystudy.ui.components
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.edgardev.buystudy.R
-import com.edgardev.buystudy.databinding.ActivityMainBinding
-import com.edgardev.buystudy.ui.AgendaFragment2
-import com.edgardev.buystudy.ui.HistorialFragment
-import com.edgardev.buystudy.ui.InicioFragment
-import com.edgardev.buystudy.ui.TransaccionesFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.edgardev.buystudy.db.DBHelper
+//import com.edgardev.buystudy.ui.AgendaScreen
+//import com.edgardev.buystudy.ui.HistorialScreen
+//import com.edgardev.buystudy.ui.InicioScreen
+import com.edgardev.buystudy.ui.TransaccionesScreen
+import com.edgardev.buystudy.viewmodel.TransaccionesViewModel
 
-enum class ProviderType {
-    BASIC
-}
+//modelo para cada item del BottomNavigation
+data class BottomNavItem(
+    val route: String,
+    val label: String,
+    val icon: ImageVector
+)
 
-class BottomNavigation : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var bottomNavigationView: BottomNavigationView
-    // private lateinit var btnCerrarSesion: Button
-    // private lateinit var emailCerrar: TextView
-    // private lateinit var providerCerrar: TextView
-
+class BottomNavigation : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bottom_navigation)
+        setContent {
+            MainScreen()
+        }
+    }
+}
 
+@Composable
+fun MainScreen() {
+    val navController = rememberNavController()
 
-        // binding = ActivityMainBinding.inflate(layoutInflater)
-        // setContentView(binding.root)
+    val items = listOf(
+        BottomNavItem("inicio", "Inicio", Icons.Default.Home),
+        BottomNavItem("historial", "Historial", Icons.Default.List),
+        BottomNavItem("agenda", "Agenda", Icons.Default.DateRange),
+        BottomNavItem("transacciones", "Transacciones", Icons.Default.ShoppingCart)
+    )
 
-        // emailCerrar = findViewById(R.id.emailTextView)
-        // providerCerrar = findViewById(R.id.providerTextView)
-        // btnCerrarSesion = findViewById(R.id.btnCerrarSesion)
-        // val bundle = intent.extras
-        // val email = bundle?.getString("email")
-        // val provider = bundle?.getString("provider")
-        // setUp(email ?: "", provider ?: "")
-
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
-            when(menuItem.itemId){
-                R.id.inicio -> {
-                    replaceFragment(InicioFragment())
-                    true
-                }
-                R.id.historial -> {
-                    replaceFragment(HistorialFragment())
-                    true
-                }
-                R.id.agenda -> {
-                    replaceFragment(AgendaFragment2())
-                    true
-                }
-                R.id.transaccion -> {
-                    replaceFragment(TransaccionesFragment())
-                    true
-                }
-                else -> false
+    Scaffold(
+        bottomBar = { BottomNavigationBar(navController, items) }
+    ) { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = "inicio",
+            modifier = Modifier.padding(innerPadding)
+        ) {
+            //cambiar despues inicio. agenda  e historial a su respectivo composable
+            composable("inicio") {
+                val context = LocalContext.current
+                val viewModel = remember { TransaccionesViewModel(DBHelper(context)) }
+                TransaccionesScreen(viewModel = viewModel)
+            }
+            composable("historial") {
+                val context = LocalContext.current
+                val viewModel = remember { TransaccionesViewModel(DBHelper(context)) }
+                TransaccionesScreen(viewModel = viewModel)
+            }
+            composable("agenda") {
+                val context = LocalContext.current
+                val viewModel = remember { TransaccionesViewModel(DBHelper(context)) }
+                TransaccionesScreen(viewModel = viewModel)
+            }
+            composable("transacciones") {
+                val context = LocalContext.current
+                val viewModel = remember { TransaccionesViewModel(DBHelper(context)) }
+                TransaccionesScreen(viewModel = viewModel)
             }
         }
-
-        replaceFragment(InicioFragment())
     }
+}
 
-    //private fun setUp(email: String, provider: String) {
-    //    emailCerrar.text = email
-    //    providerCerrar.text = provider
-//
-    //    btnCerrarSesion.setOnClickListener {
-    //        FirebaseAuth.getInstance().signOut()
-    //        val intent = Intent(this, MainActivity::class.java)
-    //        startActivity(intent)
-    //    }
+@Composable
+fun BottomNavigationBar(navController: NavHostController, items: List<BottomNavItem>) {
+    val navBackStackEntry = navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry.value?.destination?.route
 
-    private fun replaceFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-
-    override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStack()
-        } else {
-            super.onBackPressed()
+    NavigationBar {
+        items.forEach { item ->
+            NavigationBarItem(
+                icon = { Icon(item.icon, contentDescription = item.label) },
+                label = { Text(item.label) },
+                selected = currentRoute == item.route,
+                onClick = {
+                    navController.navigate(item.route) {
+                        //evita duplicados en el backstack
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            )
         }
     }
 }

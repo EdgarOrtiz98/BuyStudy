@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.edgardev.buystudy.databinding.ActivityMainBinding
 import com.edgardev.buystudy.ui.components.BottomNavigation
-import com.edgardev.buystudy.ui.components.ProviderType
+import com.edgardev.buystudy.models.ProviderType
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,8 +54,6 @@ class MainActivity : AppCompatActivity() {
         Log.i("dato","On destroy")
 
     }
-
-
 
     private fun setup() {
         binding.btnAccederLogin.setOnClickListener {
@@ -108,7 +106,7 @@ class MainActivity : AppCompatActivity() {
             putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
-        finish() // Cierra la actividad actual
+        finish() //cierra la actividad actual
         Toast.makeText(this, "Successful Login", Toast.LENGTH_SHORT).show()
     }
 }
