@@ -18,9 +18,6 @@
             android:name=".ui.FormNotes"
             android:exported="false" />
         <activity
-            android:name=".FormNOtes"
-            android:exported="false" />
-        <activity
             android:name=".ui.components.BottomNavigation"
             android:exported="false" />
         <activity

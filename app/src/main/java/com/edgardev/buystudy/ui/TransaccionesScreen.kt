@@ -88,11 +88,12 @@ fun TransaccionesScreen(viewModel: TransaccionesViewModel) {
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.padding(top = 10.dp)
                 ) {
+                    //monto de la aplicacion
                     Text(
                         text = "$",
                         color = white,
                         fontSize = 23.sp,
-                        modifier = Modifier.padding(end = 10.dp)
+                        //modifier = Modifier.padding(end = 10.dp)
                     )
 
                     OutlinedTextField(
