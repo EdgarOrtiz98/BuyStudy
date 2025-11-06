@@ -1,12 +1,13 @@
+package com.edgardev.buystudy.db
+
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.widget.Toast
-import com.edgardev.buystudy.GastosList
-import com.edgardev.buystudy.IngresoList
-import com.edgardev.buystudy.TransaccionesList
+import com.edgardev.buystudy.models.GastosList
+import com.edgardev.buystudy.models.IngresoList
+import com.edgardev.buystudy.models.TransaccionesList
 import java.util.Calendar
 
 class DBHelper(context: Context): SQLiteOpenHelper(context, BuyStudy, null, DATABASE_VERSION) {

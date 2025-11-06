@@ -1,6 +1,6 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
-import DBHelper
+import com.edgardev.buystudy.db.DBHelper
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.edgardev.buystudy.R
 import com.edgardev.buystudy.databinding.FragmentTransaccionesBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar

@@ -1,6 +1,6 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
-import DBHelper
+import com.edgardev.buystudy.db.DBHelper
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,9 +15,10 @@ import androidx.appcompat.app.AlertDialog
 import com.edgardev.buystudy.databinding.FragmentAgendaBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import android.text.format.DateFormat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.edgardev.buystudy.R
+import com.edgardev.buystudy.adapter.MyAdapter
 
 class AgendaFragment : Fragment() {
 

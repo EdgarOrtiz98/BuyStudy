@@ -1,16 +1,15 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui.components
 
-import HistorialFragment
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.edgardev.buystudy.R
 import com.edgardev.buystudy.databinding.ActivityMainBinding
+import com.edgardev.buystudy.ui.AgendaFragment2
+import com.edgardev.buystudy.ui.HistorialFragment
+import com.edgardev.buystudy.ui.InicioFragment
+import com.edgardev.buystudy.ui.TransaccionesFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
     BASIC

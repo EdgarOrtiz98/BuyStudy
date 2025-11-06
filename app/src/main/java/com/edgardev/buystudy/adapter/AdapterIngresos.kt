@@ -1,8 +1,9 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.edgardev.buystudy.models.IngresoList
 import com.edgardev.buystudy.databinding.CardviewIngresoBinding
 
 class AdapterIngresos(private val ingresos: List<IngresoList>, private val clickListener: (Int) -> Unit) :

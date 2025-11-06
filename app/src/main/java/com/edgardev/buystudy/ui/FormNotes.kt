@@ -1,7 +1,8 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.edgardev.buystudy.R
 
 class FormNotes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,11 +1,12 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.edgardev.buystudy.TransaccionesList
+import com.edgardev.buystudy.R
+import com.edgardev.buystudy.models.TransaccionesList
 
 class AdapterUltimosGastos(private val transacciones: List<TransaccionesList>) :
     RecyclerView.Adapter<AdapterUltimosGastos.TransaccionViewHolder>() {

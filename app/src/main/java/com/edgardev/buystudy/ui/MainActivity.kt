@@ -1,17 +1,15 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.inputmethod.InputBinding
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.edgardev.buystudy.databinding.ActivityMainBinding
+import com.edgardev.buystudy.ui.components.BottomNavigation
+import com.edgardev.buystudy.ui.components.ProviderType
 
 class MainActivity : AppCompatActivity() {
 

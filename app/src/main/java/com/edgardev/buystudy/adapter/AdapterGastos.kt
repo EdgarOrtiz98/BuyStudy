@@ -1,4 +1,4 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.adapter
 
 
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.edgardev.buystudy.GastosList
+import com.edgardev.buystudy.models.GastosList
 import com.edgardev.buystudy.R
 
 class AdapterGastos(private val gastosList: List<GastosList>, private val onItemClick: (Int) -> Unit) :

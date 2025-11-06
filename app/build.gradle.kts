@@ -40,7 +40,7 @@ android {
         viewBinding = true
         compose = true
         composeOptions {
-            kotlinCompilerExtensionVersion = "1.5.3"
+            kotlinCompilerExtensionVersion = "1.5.1"
         }
     }
 }
@@ -63,4 +63,24 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    //para compose
+    // Compose BOM (maneja versiones compatibles automáticamente)
+    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+
+    // Dependencias básicas de Compose
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.runtime:runtime")
+
+    // Para integración con Activity
+    implementation("androidx.activity:activity-compose:1.8.0")
+
+    // Para integración con ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    // Opcional: para depuración
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }

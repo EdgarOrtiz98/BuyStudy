@@ -1,12 +1,11 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
-import DBHelper
+import com.edgardev.buystudy.db.DBHelper
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import com.edgardev.buystudy.databinding.FragmentTransaccionesBinding
 
 class DetallesFragment : Fragment() {

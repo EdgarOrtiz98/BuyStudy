@@ -1,4 +1,4 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.edgardev.buystudy.R
 import com.edgardev.buystudy.databinding.FragmentFormNotesBinding
 import com.edgardev.buystudy.models.Notas
 import com.google.firebase.database.DatabaseReference

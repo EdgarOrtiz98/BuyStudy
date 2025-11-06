@@ -1,4 +1,4 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.models
 
 class Datalist(
     var cantidad: String? = null,

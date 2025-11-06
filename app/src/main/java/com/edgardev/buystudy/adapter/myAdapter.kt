@@ -1,11 +1,12 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.edgardev.buystudy.R
+import com.edgardev.buystudy.db.DBHelper
 
 class MyAdapter(private var listaNotas: List<DBHelper.Nota>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 

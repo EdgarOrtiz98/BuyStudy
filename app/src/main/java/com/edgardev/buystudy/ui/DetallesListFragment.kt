@@ -1,4 +1,4 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.ui
 
 import android.database.Cursor
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.edgardev.buystudy.databinding.FragmentDetallesListBinding
-import DBHelper
+import com.edgardev.buystudy.db.DBHelper
 
 class DetallesListFragment : Fragment() {
 

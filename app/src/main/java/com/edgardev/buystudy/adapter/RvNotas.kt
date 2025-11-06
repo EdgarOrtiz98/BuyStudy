@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.edgardev.buystudy.AgendaFragment2Directions
+import com.edgardev.buystudy.ui.AgendaFragment2Directions
 import com.edgardev.buystudy.databinding.CardviewGeneralBinding
 import com.edgardev.buystudy.models.Notas
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

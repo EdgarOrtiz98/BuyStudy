@@ -1,6 +1,6 @@
-package com.edgardev.buystudy
+package com.edgardev.buystudy.models
 
-data class GastosList(
+class TransaccionesList (
     val id: Int,
     val cantidad: String,
     val tipo: String,
