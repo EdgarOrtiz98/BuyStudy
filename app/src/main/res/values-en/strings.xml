@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="permission_required">Camera access is required to display the camera preview.</string>
+    <string name="ok">OK</string>
+    <string name="permission_granted">Permission is granted. You can use the camera now.</string>
     <string name="bienvenidos">Welcome</string>
     <string name="correo">Email</string>
     <string name="contraseña">Password</string>
